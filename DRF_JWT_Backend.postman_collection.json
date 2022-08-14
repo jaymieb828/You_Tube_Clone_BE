@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "d4409d57-7119-4339-bfae-1f3a18bc6341",
+		"_postman_id": "42a0d1f2-c3f5-40ef-9100-516fa8b99129",
 		"name": "DRF_JWT_Backend",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21446045"
 	},
 	"item": [
 		{
@@ -83,7 +84,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"refresh\": \"PASTE REFRESH TOKEN FROM LOGIN HERE\"\r\n}",
+							"raw": "{\r\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1MzUwNjE2OSwiaWF0IjoxNjUxNzc4MTY5LCJqdGkiOiI2MjFmZTUwMDhkOTI0MmM3OWFlNDYwNzI3MzFhMzE3YyIsInVzZXJfaWQiOjIsInVzZXJuYW1lIjoiZGFudGhlbWFuIiwiZmlyc3RfbmFtZSI6IkRhbmllbCJ9.MWIlm7K8YdgYAwirM2945ldsPwdkD4rQPk9lyDMID30\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -118,9 +119,28 @@
 			"item": [
 				{
 					"name": "GET all cars (unprotected)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyNTU0NDczLCJpYXQiOjE2NTE2OTA0NzMsImp0aSI6IjU3YWZkODNhOThkMTQxMGFiMmFiM2IxOGNiYzUyOWE5IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.C6RJoE8kthODE7XFTkiJzXRcPydDo8h9T6Xflw6mHA4",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "http://127.0.0.1:8000/api/cars/all/",
 							"protocol": "http",
@@ -151,7 +171,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MTU2ODM5LCJpYXQiOjE2NDcyOTI4MzksImp0aSI6ImJjYzJhZTUzOTRlYzQ3OThiNjI0YTcwYTYzYjcxOThmIiwidXNlcl9pZCI6MSwidXNlcm5hbWUiOiJqanZlZ2EiLCJmaXJzdF9uYW1lIjoiIn0.l9ATW5CpWF2TGniqVgU1I-a8LkuqgLQ4ok3tJh6asAA",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyNTU0NDczLCJpYXQiOjE2NTE2OTA0NzMsImp0aSI6IjU3YWZkODNhOThkMTQxMGFiMmFiM2IxOGNiYzUyOWE5IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.C6RJoE8kthODE7XFTkiJzXRcPydDo8h9T6Xflw6mHA4",
 								"type": "text"
 							}
 						],
@@ -190,7 +210,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ4MTU3MjczLCJpYXQiOjE2NDcyOTMyNzMsImp0aSI6IjIyMDQ4YTg2NzEzMTQyMmZhZjJmNDNmYmI2MTExZDg2IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.DeTe47E7-9eCr7xKE22m3CvFMDj0Sxye5A6ndwJ024M",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUyNTU0NDczLCJpYXQiOjE2NTE2OTA0NzMsImp0aSI6IjU3YWZkODNhOThkMTQxMGFiMmFiM2IxOGNiYzUyOWE5IiwidXNlcl9pZCI6MiwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.C6RJoE8kthODE7XFTkiJzXRcPydDo8h9T6Xflw6mHA4",
 								"type": "text"
 							}
 						],
@@ -216,6 +236,134 @@
 							"path": [
 								"api",
 								"cars",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Get Comments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxMzE3MTU3LCJpYXQiOjE2NjA0NTMxNTcsImp0aSI6IjFkNGQxNjNmMDMxYjRmMTJhYmU1ZDdkZGI2ZjhjNGIxIiwidXNlcl9pZCI6NCwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.TdAd76yQLtkO8Q8PBR0zzJIjJyCZfjAds8T2KxlgpxY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/Nyl4DTDMu2M/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								"Nyl4DTDMu2M",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Comments",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxMzE3MTU3LCJpYXQiOjE2NjA0NTMxNTcsImp0aSI6IjFkNGQxNjNmMDMxYjRmMTJhYmU1ZDdkZGI2ZjhjNGIxIiwidXNlcl9pZCI6NCwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.TdAd76yQLtkO8Q8PBR0zzJIjJyCZfjAds8T2KxlgpxY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"video_id\": \"Nyl4DTDMu2M\",\r\n    \"text\": \"Summer 2020 on Candlewood Lake\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjYxMzE3MTU3LCJpYXQiOjE2NjA0NTMxNTcsImp0aSI6IjFkNGQxNjNmMDMxYjRmMTJhYmU1ZDdkZGI2ZjhjNGIxIiwidXNlcl9pZCI6NCwidXNlcm5hbWUiOiJkYW50aGVtYW4iLCJmaXJzdF9uYW1lIjoiRGFuaWVsIn0.TdAd76yQLtkO8Q8PBR0zzJIjJyCZfjAds8T2KxlgpxY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"video_id\": \"Nyl4DTDMu2M\",\r\n    \"text\": \"Cool!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/comments/1/update/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"comments",
+								"1",
+								"update",
 								""
 							]
 						}
